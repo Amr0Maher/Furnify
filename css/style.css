@@ -1,0 +1,1103 @@
+/* Reset default padding, margin, and box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    perspective: 600px;
+    /* Adds perspective for 3D transformations */
+    font-family: sans-serif, "Edu AU VIC WA NT Hand", cursive;
+    /* Font family */
+    text-transform: capitalize;
+    /* Capitalize text */
+}
+
+/* Container styles */
+.container {
+    margin: auto;
+    /* Center the container horizontally */
+    width: 80%;
+    /* Set container width */
+}
+
+/* Header styles */
+.container header {
+    display: flex;
+    /* Flex container for header */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: space-between;
+    /* Space between items */
+    padding-top: 20px;
+    /* Top padding */
+    flex-flow: wrap row;
+    /* Wrap items in row */
+}
+
+/* Navigation styles */
+.container header nav ul {
+    display: flex;
+    /* Flex container for nav links */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    flex-flow: wrap row;
+    /* Wrap items in row */
+    gap: 10px;
+    /* Gap between items */
+}
+
+/* List item styles for nav and footer links */
+.container header nav ul li,
+footer .footer-main .links ul li {
+    list-style: none;
+    /* Remove default list styles */
+    font-size: 18px;
+    /* Font size for list items */
+}
+
+/* Link styles */
+.container header nav ul li a,
+.logo a,
+footer .footer-main .links ul li a {
+    text-decoration: none;
+    /* Remove underline */
+    color: black;
+    /* Link color */
+    position: relative;
+    /* Position relative for pseudo elements */
+    padding: 10px;
+    /* Padding for links */
+}
+
+/* Right side decoration */
+.container header nav ul li a .right {
+    position: absolute;
+    /* Position absolute for right decoration */
+    right: 0;
+    top: 0;
+    background-color: gray;
+    /* Background color */
+    width: 2px;
+    /* Width of decoration */
+    height: 0px;
+    /* Initial height */
+    transition: 1s;
+    /* Transition duration */
+}
+
+/* Hover effect for right decoration */
+.container header nav ul li a:hover .right {
+    height: 100%;
+    /* Increase height on hover */
+}
+
+/* Left side decoration */
+.container header nav ul li a .left {
+    position: absolute;
+    /* Position absolute for left decoration */
+    left: 0;
+    bottom: 0;
+    background-color: gray;
+    /* Background color */
+    width: 2px;
+    /* Width of decoration */
+    height: 0px;
+    /* Initial height */
+    transition: 1s;
+    /* Transition duration */
+}
+
+/* Hover effect for left decoration */
+.container header nav ul li a:hover .left {
+    height: 100%;
+    /* Increase height on hover */
+}
+
+/* Underline effect on hover */
+.container header nav ul li a:hover::before,
+.container header nav ul li a:hover::after {
+    width: 100%;
+    /* Increase width on hover */
+}
+
+/* Horizontal pseudo elements */
+.container header nav ul li a::before,
+.container header nav ul li a::after {
+    position: absolute;
+    /* Position absolute for pseudo elements */
+    content: '';
+    /* Empty content */
+    width: 0%;
+    /* Initial width */
+    height: 2px;
+    /* Height of underline */
+    background-color: gray;
+    /* Color of underline */
+    transition: 0.5s;
+    /* Transition duration */
+}
+
+/* Underline from left */
+.container header nav ul li a::before {
+    top: 0;
+    /* Position from top */
+    left: 0;
+    /* Position from left */
+}
+
+/* Underline from right */
+.container header nav ul li a::after {
+    bottom: 0;
+    /* Position from bottom */
+    right: 0;
+    /* Position from right */
+}
+
+/* Logo styles */
+.container header .logo h2 a {
+    font-size: 40px;
+    /* Font size */
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    /* Font family */
+    color: black;
+    /* Text color */
+}
+
+/* Icon container styles */
+.container header nav .icon {
+    display: flex;
+    /* Flex container for icons */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    flex-flow: wrap;
+    /* Wrap items */
+    font-size: 20px;
+    /* Font size */
+    cursor: pointer;
+    /* Cursor style */
+    color: black;
+    /* Icon color */
+    gap: 10px;
+}
+
+/* Cart icon position */
+.container header nav .icon .fa-cart-shopping {
+    position: relative;
+    /* Relative positioning */
+}
+
+/* Cart badge styles */
+.container header nav .icon .fa-cart-shopping::after {
+    position: absolute;
+    /* Absolute positioning */
+    content: '0';
+    /* Content of badge */
+    width: 30px;
+    /* Width of badge */
+    height: 30px;
+    /* Height of badge */
+    top: -35px;
+    /* Position from top */
+    right: -15px;
+    /* Position from right */
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    border-radius: 50%;
+    /* Border radius for circle */
+    font-size: 15px;
+    /* Font size */
+    background-color: black;
+    /* Background color */
+    color: white;
+    /* Text color */
+}
+
+/* Table parent position */
+.table-parent {
+    position: relative;
+    /* Relative positioning */
+}
+
+/* Table reveal on hover */
+.table-parent:hover table {
+    transform: scale(1);
+    /* Scale up */
+    transition: 0.5s;
+    /* Transition duration */
+}
+
+/* Table styles */
+.table-parent table {
+    position: absolute;
+    /* Absolute positioning */
+    bottom: -235px;
+    /* Position from bottom */
+    left: 0;
+    /* Position from left */
+    padding: 10px;
+    /* Padding */
+    text-align: center;
+    /* Center text */
+    transform: scale(0);
+    /* Initial scale (hidden) */
+    transition: 0.5s;
+    /* Transition duration */
+    background-color: white;
+    /* Background color */
+    width: 400px;
+    /* Width */
+    border: 1px solid black;
+    /* Border */
+    color: black;
+    /* Text color */
+}
+
+/* Table header and cell padding */
+.table-parent table tr th,
+.table-parent table tr td {
+    padding: 10px;
+    /* Padding */
+}
+
+/*  */
+/* Main container styles */
+.container main {
+    width: 100%;
+    /* Full width */
+    height: 70vh;
+    /* 70% of viewport height */
+    background-image: url(../images/pexels-karolina-grabowska-7193576.jpg);
+    /* Background image */
+    background-repeat: no-repeat;
+    /* No repeat */
+    background-size: cover;
+    /* Cover the entire container */
+    background-position: right center;
+    /* Positioning of the background image */
+    margin: 20px 0px;
+    /* Margin */
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+}
+
+/* Main text container styles */
+.container main .main-text {
+    width: 80%;
+    /* 80% width */
+    display: flex;
+    /* Flex container */
+    align-items: flex-start;
+    /* Align items to the start */
+    justify-content: flex-start;
+    /* Justify content to the start */
+    flex-flow: wrap column;
+    /* Wrap items in column */
+    gap: 20px;
+    /* Gap between items */
+}
+
+/* Heading styles */
+.container main .main-text h1 {
+    font-size: 70px;
+    /* Font size */
+    font-weight: 700;
+    /* Font weight */
+    font-family: "Edu AU VIC WA NT Hand", "cursive";
+    /* Font family */
+    color: black;
+    /* Text color */
+}
+
+/* Button styles */
+.container main .main-text button {
+    padding: 10px 15px;
+    /* Padding */
+    border: none;
+    /* No border */
+    font-weight: 500;
+    /* Font weight */
+    border-radius: 8px;
+    /* Border radius */
+    text-transform: capitalize;
+    /* Capitalize text */
+    background-color: black;
+    /* Background color */
+    color: white;
+    /* Text color */
+    font-size: 30px;
+    /* Font size */
+    box-shadow: 4px 4px 9px 0 black;
+    /* Box shadow */
+    cursor: pointer;
+    /* Pointer cursor */
+}
+
+/* Special category container and title styles */
+.container .Special-category,
+.container .Special-category-title {
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Auto height */
+}
+
+/* Special category title and featured products title styles */
+.container .Special-category .Special-category-title,
+.container .Featured-Products .Featured-Products-main .title {
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    flex-flow: column;
+    /* Wrap items in column */
+    padding: 10px 0px;
+    /* Padding */
+    gap: 10px;
+    /* Gap between items */
+    margin: 50px 0px;
+    /* Margin */
+}
+
+/* Title heading styles */
+.container .Special-category .Special-category-title h2,
+.container .Featured-Products .Featured-Products-main .title h2 {
+    font-size: 45px;
+    /* Font size */
+    font-weight: 600;
+    /* Font weight */
+    color: black;
+    /* Text color */
+    font-family: "Edu AU VIC WA NT Hand", "cursive";
+    /* Font family */
+}
+
+/* Underline styles for title */
+.container .Special-category .Special-category-title .under-line,
+.container .Featured-Products .Featured-Products-main .title .under-line {
+    width: 150px;
+    /* Initial width */
+    background-color: black;
+    /* Background color */
+    height: 2px;
+    /* Height */
+    transition: 0.5s;
+    /* Transition duration */
+}
+
+/* Hover effect for underline */
+.container .Special-category .Special-category-title:hover .under-line,
+.container .Featured-Products .Featured-Products-main .title:hover .under-line {
+    width: 250px;
+    /* Increased width on hover */
+}
+
+/* Special category main container styles */
+.container .Special-category .Special-category-main {
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: space-between;
+    /* Space between items */
+    margin: 50px 0px;
+    /* Margin */
+    flex-flow: wrap;
+    /* Wrap items */
+}
+
+/* Special category box styles */
+.container .Special-category .Special-category-main .Special-category-box {
+    width: 280px;
+    /* Width */
+}
+
+/* Hover effect for box image */
+.container .Special-category .Special-category-main .Special-category-box:hover img {
+    transform: scale(1.1);
+    /* Scale up */
+    transition: 0.5s;
+    /* Transition duration */
+}
+
+/* Box image container styles */
+.container .Special-category .Special-category-main .Special-category-box .box-img {
+    height: 350px;
+    /* Height */
+    width: 280px;
+    /* Width */
+    overflow: hidden;
+    /* Hidden overflow */
+}
+
+/* Image styles */
+.container .Special-category .Special-category-main .Special-category-box .box-img img {
+    height: 100%;
+    /* Height */
+    width: 100%;
+    /* Width */
+    transition: 0.5s;
+    /* Transition duration */
+}
+
+/* Box text container styles */
+.container .Special-category .Special-category-main .Special-category-box .box-text {
+    width: 100%;
+    /* Full width */
+    padding: 10px;
+    /* Padding */
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: flex-start;
+    /* Justify content to the start */
+    flex-flow: column;
+    /* Wrap items in column */
+    gap: 10px;
+    /* Gap between items */
+    cursor: pointer;
+    /* Pointer cursor */
+}
+
+/* Text paragraph styles */
+.container .Special-category .Special-category-main .Special-category-box .box-text p {
+    font-size: 18px;
+    /* Font size */
+    font-weight: 500;
+    /* Font weight */
+    opacity: 0.6;
+    /* Opacity */
+    padding: 10px 0px;
+    /* Padding */
+}
+
+/* Link container styles */
+.container .Special-category .Special-category-main .Special-category-box .box-text .link {
+    width: 100%;
+    /* Full width */
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: space-between;
+    /* Space between items */
+}
+
+/* Link heading styles */
+.container .Special-category .Special-category-main .Special-category-box .box-text .link h3 {
+    font-size: 20px;
+    /* Font size */
+    font-weight: 500;
+    /* Font weight */
+    color: black;
+    /* Text color */
+}
+
+/* Icon styles */
+.container .Special-category .Special-category-main .Special-category-box .box-text .link i {
+    width: 25px;
+    /* Width */
+    height: 25px;
+    /* Height */
+    background-color: black;
+    /* Background color */
+    color: white;
+    /* Text color */
+    font-size: 15px;
+    /* Font size */
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    opacity: 0;
+    /* Initial opacity */
+    transition: 0.5s;
+    /* Transition duration */
+}
+
+/* Hover effect for icon */
+.container .Special-category .Special-category-main .Special-category-box:hover .link i {
+    opacity: 1;
+    /* Increase opacity on hover */
+}
+
+/*  */
+/* Set width to 100% for .art and .art-main within .container */
+.container .art,
+.container .art>.art-main {
+    width: 100%;
+}
+
+/* Apply margin above and below .art within .container */
+.container>.art {
+    margin: 30px 0px;
+}
+
+/* Grid layout for .art-main within .art */
+.container>.art>.art-main {
+    display: grid;
+    grid-template-columns: 1fr 300px 300px;
+    /* Three columns with specified widths */
+    grid-template-rows: 300px;
+    /* One row with fixed height */
+    gap: 10px;
+    /* Gap between grid items */
+}
+
+/* Styling for each box (.box) within .art-main */
+.container>.art>.art-main>.box {
+    position: relative;
+    /* Position relative for child elements */
+    transition: 0.5s;
+    /* Smooth transition effects */
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+/* Styling for overlay (.over-lay) within .box */
+.container .art .art-main>.box>.over-lay {
+    position: absolute;
+    /* Position absolute for overlay */
+    top: 0;
+    /* Align to top of .box */
+    left: 0;
+    /* Align to left of .box */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    padding: 20px;
+    /* Padding inside overlay */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+    /* Arrange content in column */
+}
+
+/* Styling for heading (h3) inside overlay */
+.container>.art>.art-main>.box>.over-lay>h3 {
+    font-size: 20px;
+    /* Font size */
+    font-weight: 600;
+    /* Font weight */
+    color: black;
+    /* Text color */
+    opacity: 0.6;
+    /* Opacity level */
+}
+
+/* Styling for paragraph (p) after h3 inside overlay */
+.container>.art>.art-main>.box>.over-lay h3+p {
+    font-size: 30px;
+    /* Font size */
+    font-weight: 700;
+    /* Font weight */
+    color: gray;
+    /* Text color */
+}
+
+/* Ensure images inside .box fill their parent dimensions */
+.container>.art>.art-main>.box>img {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+}
+
+/* Hover effect on .box to scale up */
+.container>.art>.art-main>.box:hover {
+    transform: scale(1.1);
+    /* Scale up by 10% */
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+/* Styling for main box (.main-box) within .art-main */
+.container>.art>.art-main>.main-box {
+    padding: 20px;
+    /* Padding around main box */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* Space between child elements */
+    flex-flow: column;
+    /* Arrange content in column */
+    background-color: gray;
+    /* Background color */
+    color: white;
+    /* Text color */
+}
+
+/* Styling for title (.title) within .main-box */
+.container>.art>.art-main>.main-box .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center align content */
+    gap: 10px;
+    /* Gap between elements */
+}
+
+/* Styling for icon (i) inside .title */
+.container>.art>.art-main>.main-box .title i {
+    font-size: 30px;
+    /* Font size */
+}
+
+/* Styling for heading 2 (h2) inside .main-box */
+.container>.art>.art-main>.main-box h2 {
+    font-size: 30px;
+    /* Font size */
+}
+
+/* Styling for paragraph (p) inside .main-box */
+.container>.art>.art-main>.main-box p {
+    opacity: 0.7;
+    /* Opacity level */
+    font-size: 20px;
+    /* Font size */
+}
+
+/* Styling for bullet points (.bullet) inside .main-box */
+.container>.art>.art-main>.main-box>.bullet {
+    display: flex;
+    /* Flexbox layout */
+    align-items: center;
+    /* Align items vertically */
+    justify-content: flex-end;
+    /* Align content to the end */
+    gap: 10px;
+    /* Gap between elements */
+    width: 100%;
+    /* Full width */
+}
+
+/* Styling for line (.line) inside .bullet */
+.container>.art>.art-main>.main-box>.bullet>.line {
+    width: 100px;
+    /* Width of the line */
+    height: 1px;
+    /* Height of the line */
+    background-color: white;
+    /* Background color */
+}
+
+/*  */
+/* Set width to 100% for .sprites and .sprites-main within .container */
+.container>.sprites,
+.container .sprites .sprites-main {
+    width: 100%;
+}
+
+/* Apply margin above and below .sprites within .container */
+.container>.sprites {
+    margin: 50px 0px;
+    /* Top and bottom margin */
+}
+
+/* Flexbox layout for .sprites-main within .sprites */
+.container .sprites .sprites-main {
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Align items vertically */
+    justify-content: space-between;
+    /* Distribute items evenly */
+}
+
+/* Styling for each box (.box) within .sprites-main */
+.container .sprites .sprites-main .box {
+    width: 200px;
+    /* Fixed width */
+}
+
+/* Styling for image container (.box-img) within .box */
+.container .sprites .sprites-main .box .box-img {
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Align items vertically */
+    justify-content: center;
+    /* Center align content */
+    height: 100px;
+    /* Fixed height */
+    overflow: hidden;
+    /* Hide overflowing content */
+}
+
+/* Styling for image (.box-img img) within .box */
+.container .sprites .sprites-main .box .box-img img {
+    transform: translateY(50px);
+    /* Initial translate transformation */
+    transition: 0.5s;
+    /* Smooth transition */
+}
+
+/* Hover effect on image when .box is hovered */
+.container .sprites .sprites-main .box:hover img {
+    transform: translateY(-50px);
+    /* Translate up on hover */
+}
+
+/* Styling for text container (.text) within .box */
+.container .sprites .sprites-main .box .text {
+    padding: 5px;
+    /* Padding around text */
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Align items vertically */
+    justify-content: center;
+    /* Center align content */
+    flex-flow: column;
+    /* Arrange content in column */
+    text-align: center;
+    /* Center align text */
+}
+
+/* Styling for heading (h4) inside .text */
+.container .sprites .sprites-main .box .text>h4 {
+    color: black;
+    /* Text color */
+    font-size: 17px;
+    /* Font size */
+    font-weight: 700;
+    /* Font weight */
+    padding: 10px 0px;
+    /* Top and bottom padding */
+}
+
+/* Styling for paragraph (p) after h4 inside .text */
+.container .sprites .sprites-main .box .text>h4+p {
+    opacity: 0.7;
+    /* Opacity level */
+    font-size: 15px;
+    /* Font size */
+}
+
+/* Vertical line (.v-line) between boxes */
+.container .sprites .sprites-main .v-line {
+    width: 2px;
+    /* Width of the line */
+    height: 190px;
+    /* Height of the line */
+    background-color: gray;
+    /* Line color */
+}
+
+/* Horizontal line (.h-line) below .sprites-main */
+.container .sprites .h-line {
+    width: 100%;
+    /* Full width */
+    height: 2px;
+    /* Height of the line */
+    background-color: gray;
+    /* Line color */
+    margin: 50px 0px;
+    /* Top and bottom margin */
+}
+
+/*  */
+/* Container for Featured Products section */
+.container .Featured-Products .Featured-Products-main {
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center align items vertically */
+    justify-content: center;
+    /* Center align items horizontally */
+    flex-flow: column;
+    /* Arrange items in column */
+}
+
+/* Text section within Featured Products */
+.container .Featured-Products .Featured-Products-main .text {
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center align items vertically */
+    justify-content: center;
+    /* Center align items horizontally */
+    gap: 25px;
+    /* Gap between elements */
+    margin: 50px 0px;
+    /* Top and bottom margin */
+}
+
+/* Styling for the text paragraph */
+.container .Featured-Products .Featured-Products-main .text p {
+    font-size: 30px;
+    /* Font size */
+    color: black;
+    /* Text color */
+    position: relative;
+    /* Position relative for pseudo element */
+}
+
+/* Pseudo element (::before) for underline effect */
+.container .Featured-Products .Featured-Products-main .text p::before {
+    position: absolute;
+    /* Position absolute */
+    content: '';
+    /* Empty content */
+    bottom: -10px;
+    /* Position below text */
+    left: 0;
+    /* Align to left */
+    width: 0%;
+    /* Initial width for transition */
+    height: 2px;
+    /* Height of underline */
+    background-color: gray;
+    /* Color of underline */
+    transition: 1s;
+    /* Transition effect */
+}
+
+/* Hover effect on text to expand underline */
+.container .Featured-Products .Featured-Products-main .text p:hover::before {
+    width: 100%;
+    /* Full width on hover */
+}
+
+/* Products section within Featured Products */
+.container .Featured-Products .Featured-Products-main .products {
+    width: 100%;
+    /* Full width */
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center align items vertically */
+    justify-content: space-between;
+    /* Distribute items evenly */
+    flex-flow: wrap;
+    /* Wrap items to new line */
+    margin: 30px 0px;
+    /* Top and bottom margin */
+}
+
+/* Individual product box within Products */
+.container .Featured-Products .Featured-Products-main .products>.box {
+    width: 300px;
+    /* Fixed width */
+}
+
+/* Styling for image container (.box-img) within product box */
+.container .Featured-Products .Featured-Products-main .products>.box>.box-img {
+    width: 300px;
+    /* Fixed width */
+    height: 400px;
+    /* Fixed height */
+    overflow: hidden;
+    /* Hide overflowing content */
+    position: relative;
+    /* Position relative for absolute children */
+}
+
+/* Styling for image (.box-img img) within image container */
+.container .Featured-Products .Featured-Products-main .products>.box>.box-img img {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+}
+
+/* Overlay (.img-overlay) for hover effect on product box */
+.container .Featured-Products .Featured-Products-main .products>.box>.box-img>.img-overlay {
+    position: absolute;
+    /* Position absolute */
+    top: 0;
+    /* Align to top */
+    right: 0;
+    /* Align to right */
+    left: 0;
+    /* Align to left */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    transition: 0.5s;
+    /* Transition effect */
+    transform: rotateY(-90deg);
+    /* Initial rotation */
+    opacity: 0.7;
+    /* Initial opacity */
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center align items vertically */
+    justify-content: center;
+    /* Center align items horizontally */
+    flex-flow: column;
+    /* Arrange items in column */
+}
+
+/* Styling for image inside overlay */
+.container .Featured-Products .Featured-Products-main .products>.box>.box-img>.img-overlay img {
+    width: 100%;
+    /* Full width */
+}
+
+/* Hover effect on product box to show overlay */
+.container .Featured-Products .Featured-Products-main .products>.box:hover .img-overlay {
+    width: 100%;
+    /* Full width on hover */
+    transform: rotateY(0);
+    /* Rotate to 0 degrees on hover */
+}
+
+/* Icon container (.icon) inside image overlay */
+.container .Featured-Products .Featured-Products-main .products>.box>.box-img>.img-overlay .icon {
+    position: absolute;
+    /* Position absolute */
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center align items vertically */
+    justify-content: center;
+    /* Center align items horizontally */
+    gap: 10px;
+    /* Gap between elements */
+}
+
+/* Styling for icon (.icon i) inside icon container */
+.container .Featured-Products .Featured-Products-main .products>.box>.box-img>.img-overlay .icon i {
+    font-size: 25px;
+    /* Font size */
+    background-color: gray;
+    /* Background color */
+    width: 40px;
+    /* Width */
+    height: 40px;
+    /* Height */
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center align items vertically */
+    justify-content: center;
+    /* Center align items horizontally */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Cursor pointer */
+}
+
+/* Styling for text (.box-text) inside product box */
+.container .Featured-Products .Featured-Products-main .products>.box>.box-text {
+    padding: 20px;
+    /* Padding around text */
+}
+
+/* Styling for star icons (.stars i) inside text */
+.container .Featured-Products .Featured-Products-main .products>.box>.box-text .stars i {
+    font-size: 20px;
+    /* Font size */
+    color: gold;
+}
+
+/* Styling for paragraph (p) inside text */
+.container .Featured-Products .Featured-Products-main .products>.box>.box-text p {
+    font-size: 20px;
+    /* Font size */
+    padding: 5px 0px;
+    /* Padding top and bottom */
+    opacity: 0.7;
+    /* Opacity level */
+}
+
+/* Additional styling for second paragraph (p) inside text */
+.container .Featured-Products .Featured-Products-main .products>.box>.box-text p+p {
+    font-weight: 600;
+    /* Font weight */
+}
+
+/*  */
+/* Base styling for the footer */
+footer {
+    width: 100%;
+    /* Full width */
+    height: 150px;
+    /* Fixed height */
+    margin-top: 50px;
+    /* Top margin */
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center align items vertically */
+    justify-content: center;
+    /* Center align items horizontally */
+    background-color: gray;
+    /* Background color */
+}
+
+/* Styling for the main content of the footer */
+footer .footer-main {
+    width: 80%;
+    /* 80% width of the footer */
+    height: 100px;
+    /* Fixed height */
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center align items vertically */
+    justify-content: space-between;
+    /* Space between items */
+}
+
+/* Styling for the logo section in the footer */
+footer .footer-main .logo {
+    font-size: 30px;
+    /* Font size */
+    font-family: "Edu AU VIC WA NT Hand", "cursive";
+    /* Custom font family */
+}
+
+/* Styling for the links section in the footer */
+footer .footer-main .links ul {
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center align items vertically */
+    justify-content: center;
+    /* Center align items horizontally */
+}
+
+/* Styling for the social media icons in the footer */
+footer .footer-main .media {
+    font-size: 25px;
+    /* Font size */
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Center align items vertically */
+    justify-content: center;
+    /* Center align items horizontally */
+    gap: 15px;
+    /* Gap between elements */
+    cursor: pointer;
+    /* Cursor pointer on hover */
+}
