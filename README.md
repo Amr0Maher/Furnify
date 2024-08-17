@@ -35,5 +35,3 @@ This project is licensed under the MIT License. For more details, check the LICE
 Flexbox and CSS Grid: For their powerful layout capabilities.
 GitHub: For hosting and sharing this project.
 Thank you for exploring Furnify! We hope you find the layout techniques both insightful and practical. Feel free to reach out with any questions, feedback, or suggestions!
-
-هذا النص يبرز مزايا المشروع بطريقة جذابة ويوفر تعليمات واضحة حول كيفية البدء. إذا كنت بحاجة إلى أي تعديلات إضافية أو تفاصيل أخرى، لا تتردد في إخباري!
