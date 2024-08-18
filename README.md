@@ -4,7 +4,7 @@
 
 Welcome to **Furnify**! This project is designed to provide hands-on experience with modern web layout techniques, specifically **Flexbox** and **CSS Grid**. Dive into the world of flexible and adaptive layouts with Flexbox and master precise, grid-based designs using CSS Grid. The skills and techniques learned from this project will empower you to create stunning and efficient web layouts with ease.
 
-![Screenshot of Furnify Project](https://github.com/Amrr-Maherr/Furnify/blob/master/%D8%A5%D8%B6%D8%A7%D9%81%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20_%20%D9%85%D8%B3%D8%AA%D9%82%D9%84%20and%204%20more%20pages%20-%20Personal%20-%20Microsoft%E2%80%8B%20Edge%208_15_2024%208_51_38%20PM.png?raw=true)
+![Screenshot of Furnify Project](https://github.com/Amrr-Maherr/Furnify/blob/master/readme-images/TourEg%20and%204%20more%20pages%20-%20Personal%20-%20Microsoft%E2%80%8B%20Edge%208_18_2024%207_03_32%20PM.png?raw=true)
 
 ## 🛠 Features
 
