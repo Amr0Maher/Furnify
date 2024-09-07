@@ -1101,3 +1101,6 @@ footer .footer-main .media {
     cursor: pointer;
     /* Cursor pointer on hover */
 }
+footer .footer-main .media i a {
+    text-decoration: none;
+}
