@@ -727,6 +727,7 @@ footer .footer-main .links ul li a {
     /* Align items vertically */
     justify-content: space-between;
     /* Distribute items evenly */
+    flex-flow: wrap;
 }
 
 /* Styling for each box (.box) within .sprites-main */
