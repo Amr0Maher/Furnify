@@ -1066,6 +1066,7 @@ footer .footer-main {
     /* Center align items vertically */
     justify-content: space-between;
     /* Space between items */
+    flex-flow: wrap;
 }
 
 /* Styling for the logo section in the footer */
@@ -1084,6 +1085,7 @@ footer .footer-main .links ul {
     /* Center align items vertically */
     justify-content: center;
     /* Center align items horizontally */
+    flex-flow: wrap;
 }
 
 /* Styling for the social media icons in the footer */
