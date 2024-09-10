@@ -418,9 +418,9 @@ footer .footer-main .links ul li a {
     /* Space between items */
     margin: 50px 0px;
     /* Margin */
-    gap:10px;
+    flex-flow: wrap;
+    /* Wrap items */
 }
-
 /* Special category box styles */
 .container .Special-category .Special-category-main .Special-category-box {
     width: 280px;
