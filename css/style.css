@@ -418,8 +418,7 @@ footer .footer-main .links ul li a {
     /* Space between items */
     margin: 50px 0px;
     /* Margin */
-    flex-flow: wrap;
-    /* Wrap items */
+    gap:10px;
 }
 
 /* Special category box styles */
