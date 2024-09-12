@@ -425,6 +425,7 @@ footer .footer-main .links ul li a {
 .container .Special-category .Special-category-main .Special-category-box {
     width: 280px;
     /* Width */
+    margin:0px auto;
 }
 
 /* Hover effect for box image */
