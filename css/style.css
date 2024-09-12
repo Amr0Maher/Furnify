@@ -511,7 +511,7 @@ footer .footer-main .links ul li a {
 }
 
 /* Icon styles */
-.container .Special-category .Special-category-main .Special-category-box .box-text .link i {
+.container .Special-category .Special-category-main .Special-category-box .box-text .link  i {
     width: 25px;
     /* Width */
     height: 25px;
