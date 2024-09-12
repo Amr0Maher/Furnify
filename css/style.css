@@ -572,6 +572,7 @@ footer .footer-main .links ul li a {
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
+    margin:0px auto;
 }
 
 /* Styling for overlay (.over-lay) within .box */
@@ -705,7 +706,7 @@ footer .footer-main .links ul li a {
     /* Background color */
 }
 
-@media(max-width:400px) {
+@media(max-width:700px) {
     .container>.art>.art-main {
             display: grid;
             grid-template-columns: 1fr;
