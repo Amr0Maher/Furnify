@@ -541,7 +541,6 @@ footer .footer-main .links ul li a {
 }
 
 /*  */
-/* Set width to 100% for .art and .art-main within .container */
 .container .art,
 .container .art>.art-main {
     width: 100%;
@@ -627,7 +626,7 @@ footer .footer-main .links ul li a {
 }
 
 /* Hover effect on .box to scale up */
-.container>.art>.art-main>.box:hover {
+.container>.art>.art-main>.hover:hover {
     transform: scale(1.1);
     /* Scale up by 10% */
     -webkit-transform: scale(1.1);
@@ -706,6 +705,17 @@ footer .footer-main .links ul li a {
     /* Background color */
 }
 
+@media(max-width:400px) {
+    .container>.art>.art-main {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* Three columns with specified widths */
+            grid-template-rows: 300px 300px 300px;
+            /* One row with fixed height */
+            gap: 10px;
+            /* Gap between grid items */
+        }
+}
 /*  */
 /* Set width to 100% for .sprites and .sprites-main within .container */
 .container>.sprites,
