@@ -1083,8 +1083,7 @@ footer {
 footer .footer-main {
     width: 80%;
     /* 80% width of the footer */
-    height: 100px;
-    /* Fixed height */
+    
     display: flex;
     /* Use flexbox */
     align-items: center;
