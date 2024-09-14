@@ -373,6 +373,7 @@ footer .footer-main .links ul li a {
     /* Gap between items */
     margin: 50px 0px;
     /* Margin */
+    text-align: center;
 }
 
 /* Title heading styles */
