@@ -717,6 +717,17 @@ footer .footer-main .links ul li a {
             gap: 10px;
             /* Gap between grid items */
         }
+    .container header {
+            display: flex;
+            /* Flex container for nav links */
+            align-items: center;
+            /* Center items vertically */
+            justify-content: center;
+            /* Center items horizontally */
+            flex-flow: column;
+            gap: 10px;
+            /* Gap between items */
+        }
 }
 /*  */
 /* Set width to 100% for .sprites and .sprites-main within .container */
