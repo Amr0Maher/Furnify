@@ -746,7 +746,7 @@ footer .footer-main .links ul li a {
 .container .sprites .sprites-main .box {
     width: 200px;
     /* Fixed width */
-    magrin:0px auto
+    margin:0px auto;
 }
 
 /* Styling for image container (.box-img) within .box */
