@@ -1091,6 +1091,7 @@ footer .footer-main {
     /* Center align items vertically */
     justify-content: space-between;
     /* Space between items */
+    flex-flow: wrap;
 }
 
 /* Styling for the logo section in the footer */
