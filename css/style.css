@@ -738,12 +738,14 @@ footer .footer-main .links ul li a {
     /* Align items vertically */
     justify-content: space-between;
     /* Distribute items evenly */
+    flex-flow:wrap;
 }
 
 /* Styling for each box (.box) within .sprites-main */
 .container .sprites .sprites-main .box {
     width: 200px;
     /* Fixed width */
+    magrin:0px auto
 }
 
 /* Styling for image container (.box-img) within .box */
